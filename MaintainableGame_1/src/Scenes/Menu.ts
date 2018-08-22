@@ -8,7 +8,16 @@ namespace MaintainableGame {
         public create(): void {
             console.log("Menu");
 
-            this.cameras.main.backgroundColor = Phaser.Display.Color.ValueToColor(0x80FF80);
+            // bacground color
+            this.cameras.main.backgroundColor = Phaser.Display.Color.ValueToColor(0x808080);
+
+            // focus on 0, 0
+            this.setView();
+
+            // red circle
+            let graphics = this.add.graphics();
+            graphics.fillStyle(0xff0000);
+            graphics.fillCircle(0, 0, 50);
         }
     }
 }

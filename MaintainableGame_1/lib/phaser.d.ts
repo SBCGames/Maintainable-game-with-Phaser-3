@@ -1600,6 +1600,8 @@ declare namespace Phaser {
 
                 centerToSize(): Phaser.Cameras.Scene2D.Camera;
 
+                centerOn(x: number, y: number): Phaser.Cameras.Scene2D.Camera;
+
                 cull<G extends Phaser.GameObjects.GameObject[]>(renderableObjects: G): G;
 
                 fadeIn(duration?: integer, red?: integer, green?: integer, blue?: integer, callback?: Function, context?: any): Phaser.Cameras.Scene2D.Camera;
