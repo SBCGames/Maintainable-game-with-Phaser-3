@@ -57,8 +57,16 @@
   </PropertyGroup>
   <ItemGroup>
     <Content Include="assets\assets.txt" />
+    <Content Include="js\es6-promise.auto.js" />
+    <Content Include="js\es6-promise.auto.min.js" />
+    <Content Include="js\maintainable_game.js" />
+    <Content Include="js\phaser.js" />
+    <Content Include="js\phaser.min.js" />
     <Content Include="tsconfig.json" />
     <Content Include="README.md" />
+    <Content Include="js\es6-promise.auto.map" />
+    <Content Include="js\es6-promise.auto.min.map" />
+    <Content Include="js\maintainable_game.js.map" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
