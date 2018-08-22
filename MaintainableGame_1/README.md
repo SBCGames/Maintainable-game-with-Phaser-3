@@ -1,2 +1,4 @@
-# Maintainable-game-with-Phaser-3
-Code for blog tutorial on building maintainable Phaser 3 game
+# Maintainable-game-with-Phaser-3: 1 - Basic project setup
+
+Besic project setup for.
+
