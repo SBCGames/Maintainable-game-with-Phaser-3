@@ -27,7 +27,7 @@ var MaintainableGame;
 (function (MaintainableGame) {
     var Game = /** @class */ (function (_super) {
         __extends(Game, _super);
-        // -------------------------------------------------------------------------
+        // --------------------------------------------------------------------
         function Game() {
             var _this = this;
             // default renderer
@@ -60,7 +60,7 @@ var MaintainableGame;
             return _super !== null && _super.apply(this, arguments) || this;
         }
         Object.defineProperty(SceneBase.prototype, "gameWidth", {
-            // -------------------------------------------------------------------------
+            // --------------------------------------------------------------------
             get: function () {
                 return this.sys.game.config.width;
             },
@@ -68,14 +68,14 @@ var MaintainableGame;
             configurable: true
         });
         Object.defineProperty(SceneBase.prototype, "gameHeight", {
-            // -------------------------------------------------------------------------
+            // --------------------------------------------------------------------
             get: function () {
                 return this.sys.game.config.height;
             },
             enumerable: true,
             configurable: true
         });
-        // -------------------------------------------------------------------------
+        // --------------------------------------------------------------------
         SceneBase.prototype.setView = function () {
             // focus on center
             this.cameras.main.centerOn(0, 0);
@@ -92,6 +92,7 @@ var MaintainableGame;
         function Boot() {
             return _super !== null && _super.apply(this, arguments) || this;
         }
+        // --------------------------------------------------------------------
         Boot.prototype.create = function () {
             console.log("Boot");
             this.scene.start("Preloader");
