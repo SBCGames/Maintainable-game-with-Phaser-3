@@ -1,4 +1,4 @@
-# Maintainable-game-with-Phaser-3: 1 - Adding external config
+# Maintainable-game-with-Phaser-3: 2 - Adding external config
 
 Besic project setup for.
 
