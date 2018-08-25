@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaintainableGame_1", "Maint
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaintainableGame_2", "MaintainableGame_2\MaintainableGame_2.csproj", "{7D67C659-D800-4092-B833-4113D943EF48}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MaintainableGame_3", "MaintainableGame_3\MaintainableGame_3.csproj", "{A5F7C2B9-064E-4B6E-86A3-96EFA417F2E7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{7D67C659-D800-4092-B833-4113D943EF48}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7D67C659-D800-4092-B833-4113D943EF48}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7D67C659-D800-4092-B833-4113D943EF48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A5F7C2B9-064E-4B6E-86A3-96EFA417F2E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A5F7C2B9-064E-4B6E-86A3-96EFA417F2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A5F7C2B9-064E-4B6E-86A3-96EFA417F2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A5F7C2B9-064E-4B6E-86A3-96EFA417F2E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

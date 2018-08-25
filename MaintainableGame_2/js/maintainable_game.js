@@ -84,6 +84,130 @@ var Utils;
     }());
     Utils.ObjectUtils = ObjectUtils;
 })(Utils || (Utils = {}));
+var Utils;
+(function (Utils) {
+    var StorageUtils = /** @class */ (function () {
+        function StorageUtils() {
+        }
+        Object.defineProperty(StorageUtils, "sponsorStorage", {
+            // -------------------------------------------------------------------------
+            set: function (sponsorStorage) {
+                StorageUtils._sponsorStorage = sponsorStorage;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        Object.defineProperty(StorageUtils, "allowMultipleRequests", {
+            // -------------------------------------------------------------------------
+            set: function (allowMultipleRequests) {
+                StorageUtils._allowMultipleRequests = allowMultipleRequests;
+            },
+            enumerable: true,
+            configurable: true
+        });
+        // -------------------------------------------------------------------------
+        StorageUtils.save = function (key, data) {
+            return __awaiter(this, void 0, void 0, function () {
+                var sponsorStorage, storage, dataString;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            // check if any load/save request is still running
+                            if (!StorageUtils._allowMultipleRequests && StorageUtils._requestsCounter > 0) {
+                                throw new Error("Previous load/save request was not finished yet");
+                            }
+                            ++StorageUtils._requestsCounter;
+                            sponsorStorage = StorageUtils._sponsorStorage;
+                            if (!(sponsorStorage !== null)) return [3 /*break*/, 2];
+                            // save
+                            return [4 /*yield*/, sponsorStorage.save(key, data)];
+                        case 1:
+                            // save
+                            _a.sent();
+                            // fallback set to true? Use also standard local storage?
+                            if (!sponsorStorage.fallbackToStandardStorage()) {
+                                --StorageUtils._requestsCounter;
+                                return [2 /*return*/];
+                            }
+                            _a.label = 2;
+                        case 2:
+                            storage = StorageUtils.getLocalStorage();
+                            if (storage !== null) {
+                                dataString = JSON.stringify(data);
+                                console.log("saving key " + key + ": " + dataString);
+                                storage.setItem(key, dataString);
+                            }
+                            else {
+                                --StorageUtils._requestsCounter;
+                                throw new Error("Standard storage not available");
+                            }
+                            --StorageUtils._requestsCounter;
+                            return [2 /*return*/];
+                    }
+                });
+            });
+        };
+        // -------------------------------------------------------------------------
+        StorageUtils.load = function (key) {
+            return __awaiter(this, void 0, void 0, function () {
+                var data, sponsorStorage, storage, dataString;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            // check if any load/save request is still running
+                            if (!StorageUtils._allowMultipleRequests && StorageUtils._requestsCounter > 0) {
+                                throw new Error("Previous load/save request was not finished yet");
+                            }
+                            ++StorageUtils._requestsCounter;
+                            data = null;
+                            sponsorStorage = StorageUtils._sponsorStorage;
+                            if (!(sponsorStorage !== null)) return [3 /*break*/, 2];
+                            return [4 /*yield*/, sponsorStorage.load(key)];
+                        case 1:
+                            // save
+                            data = _a.sent();
+                            // if got some data (not null or undefined) or fallback to standard storage not not allowed
+                            if (data != null || !sponsorStorage.fallbackToStandardStorage()) {
+                                --StorageUtils._requestsCounter;
+                                return [2 /*return*/, data];
+                            }
+                            _a.label = 2;
+                        case 2:
+                            storage = StorageUtils.getLocalStorage();
+                            if (storage !== null) {
+                                dataString = storage.getItem(key);
+                                console.log("loading key " + key + ": " + dataString);
+                                data = JSON.parse(dataString);
+                            }
+                            else {
+                                --StorageUtils._requestsCounter;
+                                throw new Error("Standard storage not available");
+                            }
+                            --StorageUtils._requestsCounter;
+                            return [2 /*return*/, data];
+                    }
+                });
+            });
+        };
+        // -------------------------------------------------------------------------
+        StorageUtils.getLocalStorage = function () {
+            try {
+                if ("localStorage" in window && window["localStorage"] != null) {
+                    return localStorage;
+                }
+            }
+            catch (e) {
+                return null;
+            }
+            return null;
+        };
+        StorageUtils._sponsorStorage = null;
+        StorageUtils._allowMultipleRequests = false;
+        StorageUtils._requestsCounter = 0;
+        return StorageUtils;
+    }());
+    Utils.StorageUtils = StorageUtils;
+})(Utils || (Utils = {}));
 var App;
 (function (App) {
     // game
