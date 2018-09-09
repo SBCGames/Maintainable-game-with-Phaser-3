@@ -90,7 +90,7 @@ var Utils;
         function StorageUtils() {
         }
         Object.defineProperty(StorageUtils, "sponsorStorage", {
-            // -------------------------------------------------------------------------
+            // --------------------------------------------------------------------
             set: function (sponsorStorage) {
                 StorageUtils._sponsorStorage = sponsorStorage;
             },
@@ -98,14 +98,14 @@ var Utils;
             configurable: true
         });
         Object.defineProperty(StorageUtils, "allowMultipleRequests", {
-            // -------------------------------------------------------------------------
+            // --------------------------------------------------------------------
             set: function (allowMultipleRequests) {
                 StorageUtils._allowMultipleRequests = allowMultipleRequests;
             },
             enumerable: true,
             configurable: true
         });
-        // -------------------------------------------------------------------------
+        // --------------------------------------------------------------------
         StorageUtils.save = function (key, data) {
             return __awaiter(this, void 0, void 0, function () {
                 var sponsorStorage, storage, dataString;
@@ -147,7 +147,7 @@ var Utils;
                 });
             });
         };
-        // -------------------------------------------------------------------------
+        // --------------------------------------------------------------------
         StorageUtils.load = function (key) {
             return __awaiter(this, void 0, void 0, function () {
                 var data, sponsorStorage, storage, dataString;
@@ -189,7 +189,7 @@ var Utils;
                 });
             });
         };
-        // -------------------------------------------------------------------------
+        // --------------------------------------------------------------------
         StorageUtils.getLocalStorage = function () {
             try {
                 if ("localStorage" in window && window["localStorage"] != null) {

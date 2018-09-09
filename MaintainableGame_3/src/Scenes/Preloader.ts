@@ -4,7 +4,7 @@ namespace MaintainableGame {
 
     export class Preloader extends SceneBase {
 
-        // -------------------------------------------------------------------------
+        // --------------------------------------------------------------------
         public preload(): void {
 
             console.log("Loading assets...");
@@ -13,7 +13,7 @@ namespace MaintainableGame {
             this.load.atlas("Sprites", "assets/sprites/Sprites.png", "assets/sprites/Sprites.json");
         }
 
-        // -------------------------------------------------------------------------
+        // --------------------------------------------------------------------
         public create(): void {
             console.log("Preloader");
 

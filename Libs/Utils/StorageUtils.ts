@@ -24,17 +24,17 @@
         private static _allowMultipleRequests: boolean = false;
         private static _requestsCounter: number = 0;
 
-        // -------------------------------------------------------------------------
+        // --------------------------------------------------------------------
         public static set sponsorStorage(sponsorStorage: ISponsorStorage) {
             StorageUtils._sponsorStorage = sponsorStorage;
         }
 
-        // -------------------------------------------------------------------------
+        // --------------------------------------------------------------------
         public static set allowMultipleRequests(allowMultipleRequests: boolean) {
             StorageUtils._allowMultipleRequests = allowMultipleRequests;
         }
 
-        // -------------------------------------------------------------------------
+        // --------------------------------------------------------------------
         public static async save(key: string, data: any): Promise<void> {
 
             // check if any load/save request is still running
@@ -76,7 +76,7 @@
             --StorageUtils._requestsCounter;
         }
 
-        // -------------------------------------------------------------------------
+        // --------------------------------------------------------------------
         public static async load(key: string): Promise<any> {
 
             // check if any load/save request is still running
@@ -122,7 +122,7 @@
             return data;
         }
 
-        // -------------------------------------------------------------------------
+        // --------------------------------------------------------------------
         private static getLocalStorage(): Storage {
             try {
                 if ("localStorage" in window && window["localStorage"] != null) {
