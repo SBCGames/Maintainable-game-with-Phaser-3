@@ -1,4 +1,3 @@
-# Maintainable-game-with-Phaser-3: 3 - User settings
+# Maintainable-game-with-Phaser-3: 4: Managing sponsor APIs - part 1
 
-Saving and loading user settings.
-
+How to manage different sponsor APIs in easy way.
