@@ -2,12 +2,12 @@
 
     // set of base sponsor features
     export interface ISponsor {
-        startGameSession(...parameters: any[]): void;
-        endGameSession(...parameters: any[]): void;
+        startGameSession(...parameters: any[]): Promise<void>;
+        endGameSession(...parameters: any[]): Promise<void>;
 
-        submitScore(...parameters: any[]): void;
+        submitScore(...parameters: any[]): Promise<void>;
 
-        showAd(...parameters: any[]): void;
+        showAd(...parameters: any[]): Promise<void>;
     }
 
     /** 
@@ -70,22 +70,22 @@
         // #region Default interface implementation
 
         // --------------------------------------------------------------------
-        public startGameSession(...parameters: any[]): void {
+        public async startGameSession(...parameters: any[]): Promise<void> {
             console.log(`Sponsor ${eSponsorID[this.id]}: startGameSession() with parameters ${parameters}`);
         }
 
         // --------------------------------------------------------------------
-        public endGameSession(...parameters: any[]): void {
+        public async endGameSession(...parameters: any[]): Promise<void> {
             console.log(`Sponsor ${eSponsorID[this.id]}: endGameSession() with parameters ${parameters}`);
         }
 
         // --------------------------------------------------------------------
-        public submitScore(...parameters: any[]): void {
+        public async submitScore(...parameters: any[]): Promise<void> {
             console.log(`Sponsor ${eSponsorID[this.id]}: submitScore() with parameters ${parameters}`);
         }
 
         // --------------------------------------------------------------------
-        public showAd(...parameters: any[]): void {
+        public async showAd(...parameters: any[]): Promise<void> {
             console.log(`Sponsor ${eSponsorID[this.id]}: showAd() with parameters ${parameters}`);
         }
 
