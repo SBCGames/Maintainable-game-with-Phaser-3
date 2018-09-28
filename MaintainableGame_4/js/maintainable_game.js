@@ -1,16 +1,3 @@
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    }
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
     return new (P || (P = Promise))(function (resolve, reject) {
         function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
@@ -46,6 +33,19 @@ var __generator = (this && this.__generator) || function (thisArg, body) {
         if (op[0] & 5) throw op[1]; return { value: op[0] ? op[1] : void 0, done: true };
     }
 };
+var __extends = (this && this.__extends) || (function () {
+    var extendStatics = function (d, b) {
+        extendStatics = Object.setPrototypeOf ||
+            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
+            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
+        return extendStatics(d, b);
+    }
+    return function (d, b) {
+        extendStatics(d, b);
+        function __() { this.constructor = d; }
+        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
+    };
+})();
 var Sponsor;
 (function (Sponsor) {
     // list of all sponsors
@@ -123,7 +123,12 @@ var Sponsor;
             for (var _i = 0; _i < arguments.length; _i++) {
                 parameters[_i] = arguments[_i];
             }
-            console.log("Sponsor " + Sponsor_1.eSponsorID[this.id] + ": startGameSession() with parameters " + parameters);
+            return __awaiter(this, void 0, void 0, function () {
+                return __generator(this, function (_a) {
+                    console.log("Sponsor " + Sponsor_1.eSponsorID[this.id] + ": startGameSession() with parameters " + parameters);
+                    return [2 /*return*/];
+                });
+            });
         };
         // --------------------------------------------------------------------
         Sponsor.prototype.endGameSession = function () {
@@ -131,7 +136,12 @@ var Sponsor;
             for (var _i = 0; _i < arguments.length; _i++) {
                 parameters[_i] = arguments[_i];
             }
-            console.log("Sponsor " + Sponsor_1.eSponsorID[this.id] + ": endGameSession() with parameters " + parameters);
+            return __awaiter(this, void 0, void 0, function () {
+                return __generator(this, function (_a) {
+                    console.log("Sponsor " + Sponsor_1.eSponsorID[this.id] + ": endGameSession() with parameters " + parameters);
+                    return [2 /*return*/];
+                });
+            });
         };
         // --------------------------------------------------------------------
         Sponsor.prototype.submitScore = function () {
@@ -139,7 +149,12 @@ var Sponsor;
             for (var _i = 0; _i < arguments.length; _i++) {
                 parameters[_i] = arguments[_i];
             }
-            console.log("Sponsor " + Sponsor_1.eSponsorID[this.id] + ": submitScore() with parameters " + parameters);
+            return __awaiter(this, void 0, void 0, function () {
+                return __generator(this, function (_a) {
+                    console.log("Sponsor " + Sponsor_1.eSponsorID[this.id] + ": submitScore() with parameters " + parameters);
+                    return [2 /*return*/];
+                });
+            });
         };
         // --------------------------------------------------------------------
         Sponsor.prototype.showAd = function () {
@@ -147,7 +162,12 @@ var Sponsor;
             for (var _i = 0; _i < arguments.length; _i++) {
                 parameters[_i] = arguments[_i];
             }
-            console.log("Sponsor " + Sponsor_1.eSponsorID[this.id] + ": showAd() with parameters " + parameters);
+            return __awaiter(this, void 0, void 0, function () {
+                return __generator(this, function (_a) {
+                    console.log("Sponsor " + Sponsor_1.eSponsorID[this.id] + ": showAd() with parameters " + parameters);
+                    return [2 /*return*/];
+                });
+            });
         };
         Sponsor._instance = null;
         return Sponsor;
@@ -172,8 +192,120 @@ var Sponsor;
         __extends(SponsorSBCGames, _super);
         // --------------------------------------------------------------------
         function SponsorSBCGames(features) {
-            return _super.call(this, features) || this;
+            var _this = _super.call(this, features) || this;
+            Utils.StorageUtils.sponsorStorage = _this;
+            return _this;
         }
+        // --------------------------------------------------------------------
+        SponsorSBCGames.prototype.startGameSession = function () {
+            var parameters = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                parameters[_i] = arguments[_i];
+            }
+            return __awaiter(this, void 0, void 0, function () {
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            console.log("Sponsor " + Sponsor.eSponsorID[this.id] + ": startGameSession() with parameters " + parameters);
+                            return [4 /*yield*/, new Promise(function (resolve) {
+                                    console.log("starting timeout - 3 secs");
+                                    setTimeout(function () {
+                                        console.log("timeout over");
+                                        resolve();
+                                    }, 3000);
+                                })];
+                        case 1:
+                            _a.sent();
+                            return [2 /*return*/];
+                    }
+                });
+            });
+        };
+        // --------------------------------------------------------------------
+        SponsorSBCGames.prototype.endGameSession = function () {
+            var parameters = [];
+            for (var _i = 0; _i < arguments.length; _i++) {
+                parameters[_i] = arguments[_i];
+            }
+            return __awaiter(this, void 0, void 0, function () {
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            console.log("Sponsor " + Sponsor.eSponsorID[this.id] + ": endGameSession() with parameters " + parameters);
+                            if (typeof parameters[0] !== "undefined") {
+                                console.log("pramaters = " + JSON.stringify(parameters[0]));
+                            }
+                            return [4 /*yield*/, new Promise(function (resolve) {
+                                    console.log("starting timeout - 3 secs");
+                                    setTimeout(function () {
+                                        console.log("timeout over");
+                                        resolve();
+                                    }, 3000);
+                                })];
+                        case 1:
+                            _a.sent();
+                            return [2 /*return*/];
+                    }
+                });
+            });
+        };
+        // #region ISponsorStorage interface implementation
+        // --------------------------------------------------------------------
+        SponsorSBCGames.prototype.save = function (key, data) {
+            return __awaiter(this, void 0, void 0, function () {
+                var storage;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            storage = window.localStorage;
+                            return [4 /*yield*/, new Promise(function (resolve) {
+                                    console.log("saving somewhere into cloud - it will take 3 seconds");
+                                    setTimeout(function () {
+                                        console.log("data saved");
+                                        storage.setItem(key, JSON.stringify(data));
+                                        resolve();
+                                    }, 3000);
+                                })];
+                        case 1:
+                            _a.sent();
+                            return [2 /*return*/];
+                    }
+                });
+            });
+        };
+        // --------------------------------------------------------------------
+        SponsorSBCGames.prototype.load = function (key) {
+            return __awaiter(this, void 0, void 0, function () {
+                var storage, result;
+                return __generator(this, function (_a) {
+                    switch (_a.label) {
+                        case 0:
+                            storage = window.localStorage;
+                            return [4 /*yield*/, new Promise(function (resolve) {
+                                    console.log("loading from cloud - it will take 3 seconds");
+                                    setTimeout(function () {
+                                        console.log("data loaded");
+                                        var data = storage.getItem(key);
+                                        console.log("data  = " + data);
+                                        resolve(data == null ? null : JSON.parse(data));
+                                    }, 3000);
+                                })];
+                        case 1:
+                            result = _a.sent();
+                            return [2 /*return*/, result];
+                    }
+                });
+            });
+        };
+        // --------------------------------------------------------------------
+        SponsorSBCGames.prototype.fallbackToStandardStorage = function () {
+            return false;
+        };
+        // #endregion
+        // --------------------------------------------------------------------
+        SponsorSBCGames.prototype.someVerySpecificSponsorFunction = function () {
+            console.log("Very sponsor specific function for SBCGames");
+        };
         return SponsorSBCGames;
     }(Sponsor.Sponsor));
     Sponsor.SponsorSBCGames = SponsorSBCGames;

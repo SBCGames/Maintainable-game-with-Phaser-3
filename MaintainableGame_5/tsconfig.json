@@ -1,0 +1,23 @@
+{
+  "compilerOptions": {
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitAny": false,
+    "noEmitOnError": true,
+    "removeComments": false,
+    "sourceMap": true,
+    "target": "es5",
+    "lib": [ "es5", "dom", "es2015.promise", "scripthost" ],
+    "outFile": "js/maintainable_game.js"
+  },
+  "include": [
+    "../Libs/Utils/**/*",
+    "../Libs/Sponsor/**/*",
+    "lib/**/*",
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "wwwroot"
+  ]
+}

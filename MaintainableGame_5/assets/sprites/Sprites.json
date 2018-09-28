@@ -1,0 +1,110 @@
+{"frames": [
+{
+	"filename": "IconMusicOff",
+	"frame": {"x":133,"y":301,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+},
+{
+	"filename": "IconMusicOn",
+	"frame": {"x":195,"y":301,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+},
+{
+	"filename": "IconSoundOff",
+	"frame": {"x":1,"y":363,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+},
+{
+	"filename": "IconSoundOn",
+	"frame": {"x":63,"y":363,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+},
+{
+	"filename": "IconMenu",
+	"frame": {"x":125,"y":363,"w":60,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":60,"h":60},
+	"sourceSize": {"w":60,"h":60}
+},
+{
+	"filename": "IconPlay",
+	"frame": {"x":1,"y":301,"w":130,"h":60},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":0,"y":0,"w":130,"h":60},
+	"sourceSize": {"w":130,"h":60}
+},
+{
+	"filename": "pig01",
+	"frame": {"x":108,"y":1,"w":105,"h":98},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":51,"w":105,"h":98},
+	"sourceSize": {"w":148,"h":176}
+},
+{
+	"filename": "pig02",
+	"frame": {"x":1,"y":101,"w":104,"h":98},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":51,"w":104,"h":98},
+	"sourceSize": {"w":148,"h":176}
+},
+{
+	"filename": "pig03",
+	"frame": {"x":1,"y":201,"w":103,"h":98},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":51,"w":103,"h":98},
+	"sourceSize": {"w":148,"h":176}
+},
+{
+	"filename": "pig04",
+	"frame": {"x":106,"y":201,"w":102,"h":98},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":51,"w":102,"h":98},
+	"sourceSize": {"w":148,"h":176}
+},
+{
+	"filename": "pig05",
+	"frame": {"x":107,"y":101,"w":104,"h":98},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":51,"w":104,"h":98},
+	"sourceSize": {"w":148,"h":176}
+},
+{
+	"filename": "pig06",
+	"frame": {"x":1,"y":1,"w":105,"h":98},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":51,"w":105,"h":98},
+	"sourceSize": {"w":148,"h":176}
+},
+{
+	"filename": "pig07",
+	"frame": {"x":108,"y":1,"w":105,"h":98},
+	"rotated": false,
+	"trimmed": true,
+	"spriteSourceSize": {"x":32,"y":51,"w":105,"h":98},
+	"sourceSize": {"w":148,"h":176}
+}
+],
+"meta": {
+	"app": "Spritor"
+}
+}
